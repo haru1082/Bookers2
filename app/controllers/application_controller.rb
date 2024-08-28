@@ -6,10 +6,6 @@ class ApplicationController < ActionController::Base
     user_path(current_user)
   end 
   
-  def after_sign_in_path_for(resource)
-    books_path
-  end
-  
   def after_sigh_out_path_for(resource)
     about_path
   end 
