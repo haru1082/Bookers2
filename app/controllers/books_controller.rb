@@ -4,13 +4,12 @@ class BooksController < ApplicationController
    @book = Book.new
    @books = Book.all
    @user = current_user
-   @paginated_books = PaginatedBook.page(params[:page])
  end
  
  def show
+   @new_book = Book.new
    @book = Book.find(params[:id])
-   @post_comment = PostComment.new
- end 
+ end
  
  
  def create
